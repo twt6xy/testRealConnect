@@ -134,7 +134,7 @@ AUTHENTICATION_BACKENDS = (
  'allauth.account.auth_backends.AuthenticationBackend',
  )
 # 3 for heroku
-SITE_ID = 2
+SITE_ID = 4
 LOGIN_REDIRECT_URL = '/'
 
 
