@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'django_google.apps.DjangoGoogleConfig',
     'realConnectSite',   # <--
     'allauth',   # <--
     'allauth.account',   # <--
@@ -134,10 +135,11 @@ AUTHENTICATION_BACKENDS = (
  'allauth.account.auth_backends.AuthenticationBackend',
  )
 # 3 for heroku
-SITE_ID = 3
+SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
 
-
+GOOGLE_CLIENT_SECRET_FILE = os.path.join(BASE_DIR, 'credentials.json')
+GOOGLE_CLIENT_ID = "20188133272-igb3p1fshior2f6rluv0ljq61097qacb.apps.googleusercontent.com"
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
         'SCOPE': [
